@@ -2,7 +2,7 @@ let apiKey = "1e3e8f230b6064d27976e41163a82b77";
 let searchinput = document.querySelector(`.searchinput`);
 
 async function search(city, state, country){
-    let url = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city},${state},${country}&appid=${apiKey}`);
+    let url = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${apiKey}`);
 
     if(url.ok){
     let data = await url.json();
